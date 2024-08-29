@@ -1,0 +1,23 @@
+[
+  {
+    "ContainingType": "HelloWorld2.Controllers.HelloWorld3Controller",
+    "Method": "Get",
+    "RelativePath": "HelloWorld3",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetHelloWorld3"
+  }
+]
