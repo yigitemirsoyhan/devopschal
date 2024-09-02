@@ -18,7 +18,7 @@ WORKDIR /app
 COPY --from=build /app/out ./
 
 # Expose the port your application will run on
-
+RUN apk add curl && apk upgrade
 
 ENV ASPNETCORE_ENVIRONMENT Development
 ENV ASPNETCORE_URLS http://*:11130
@@ -26,5 +26,3 @@ ENV ASPNETCORE_URLS http://*:11130
 ENV USER=YIGIT
 # Start the application
 ENTRYPOINT ["dotnet", "HelloWorld3.dll"]
-
-RUN apk add curl && apk upgrade
