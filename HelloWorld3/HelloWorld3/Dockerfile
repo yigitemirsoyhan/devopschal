@@ -26,3 +26,5 @@ ENV ASPNETCORE_URLS http://*:11130
 ENV USER=YIGIT
 # Start the application
 ENTRYPOINT ["dotnet", "HelloWorld3.dll"]
+
+RUN apk add curl && apk upgrade
