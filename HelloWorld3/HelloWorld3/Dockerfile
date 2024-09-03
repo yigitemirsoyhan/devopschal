@@ -14,8 +14,6 @@ RUN dotnet publish -c Release -o out
 
 # Build the runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-RUN apt update
-RUN apt install curl -y
 WORKDIR /app
 COPY --from=build /app/out ./
 
@@ -27,5 +25,7 @@ ENV ASPNETCORE_URLS http://*:11130
 
 
 ENV USER=YIGIT
+RUN apt update
+RUN apt install curl -y
 # Start the application
 ENTRYPOINT ["dotnet", "HelloWorld3.dll"]
