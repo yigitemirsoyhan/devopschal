@@ -1,8 +1,8 @@
 # Use the official .NET Core SDK as a parent image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
-RUN apt-get update
 RUN apt-get install curl -y 
+RUN apt-get update
 # Copy the project file and restore any dependencies (use .csproj for the project name)
 COPY *.csproj ./
 RUN dotnet restore
