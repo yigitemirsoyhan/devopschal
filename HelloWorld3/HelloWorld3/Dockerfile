@@ -19,9 +19,10 @@ WORKDIR /app
 COPY --from=build /app/out ./
 
 # Expose the port your application will run on
-
+EXPOSE 11130
 ENV ASPNETCORE_ENVIRONMENT Development
 ENV ASPNETCORE_URLS http://*:11130
+
 
 ENV USER=YIGIT
 # Start the application
